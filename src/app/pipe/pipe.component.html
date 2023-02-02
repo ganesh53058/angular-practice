@@ -1,0 +1,13 @@
+<div class="container mt-5" *ngFor="let std of students">
+     <div class="row">
+          <div class="col-6">
+               <p class="h4">{{std.name | uppercase}}</p> 
+               <p class="h4">{{std.name | lowercase}}</p>
+               <p class="h4">{{std.name | titlecase}}</p>
+               <p class="h4">{{std.dob }}</p>
+               <p class="h4">{{std.marks/500 | percent}}</p>
+               <p class="h4">{{std.income | currency: 'INR'}}</p>
+               <p class="h4">{{std.weight | number: '1.0-2'}}</p>
+          </div>
+     </div>
+</div>
