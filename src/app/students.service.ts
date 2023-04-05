@@ -3,7 +3,7 @@ export class StudentData{
 
      studentDetails = [
           {
-               name: "Sayed Imran",
+               name: "Ganesh",
                age: 25,
                dob: {
                     year: 2015, 

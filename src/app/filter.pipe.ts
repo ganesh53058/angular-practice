@@ -1,16 +1,21 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'filter',
-  pure: true, 
-  /* This is optional. 
-  Pipe is by default a pure pipe. 
-  By specifying pure: false, a pipe will become impure pipe.*/
+  name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
-  }
+  transform(items: any[], searchTerm: any, searchBy: string) {
 
+    // when our serach is undefined or null
+    if (!searchTerm) {
+      return items;
+    }
+
+    // when there is partial or full match of the search term
+    return items.filter(item => {
+      const currentItem = item[searchBy];
+      return currentItem.toString().toLowerCase().includes(searchTerm.trim().toLowerCase());
+    });
+  }
 }
