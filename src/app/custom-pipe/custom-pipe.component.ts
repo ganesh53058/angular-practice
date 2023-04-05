@@ -14,13 +14,13 @@ export interface Person {
 export class CustomPipeComponent implements OnInit {
   people: Person[] = [];
   searchTerm: any;
-  names = ['Maverick', 'Stanislav', 'Arxero', 'Feruchio', 'Mavericus', 'Arxiour'];
+  names = ["Ganesh", "Yuvaraj", "Kranthi", "Sagar", "Rajesh"];
 
   constructor() {
     this.names.forEach((e, i) => this.people.push({
       name: e,
-      age: i + 20,
-      country: 'Bulgaria'
+      age: i + 24,
+      country: 'AndhraPradesh'
     }));
   }
   ngOnInit(): void {
